@@ -209,7 +209,7 @@ class Controller(ServerBase):
     async def wait_for_bp_catchup(self):
         '''Wait for the block processor to catch up, then kick off server
         background processes.'''
-        await self.bp.caught_up_event.wait()
+        # await self.bp.caught_up_event.wait()
         self.logger.info('block processor has caught up')
         self.ensure_future(self.peer_mgr.main_loop())
         self.ensure_future(self.log_start_external_servers())
