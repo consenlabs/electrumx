@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM partlab/ubuntu-golang
 MAINTAINER followtheart "followtheart@outlook.com"
 
 RUN apt-get update 
